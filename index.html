@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rishabh Dixit | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f1115;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 8%;
+
+            background: #0f1115;
+            border-bottom: 1px solid #252932;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #aaa;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* MAIN */
+
+        main {
+            width: min(1000px, 90%);
+            margin: auto;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        /* HERO */
+
+        #home {
+            min-height: 85vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .small-title {
+            color: #7dd3fc;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+            color: #aaa;
+            font-size: 1.1rem;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .button {
+            padding: 11px 20px;
+            border: 1px solid #333;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .button.primary {
+            background: #7dd3fc;
+            color: #0f1115;
+            border-color: #7dd3fc;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* HEADINGS */
+
+        .section-title {
+            margin-bottom: 35px;
+        }
+
+        .section-title span {
+            color: #7dd3fc;
+            font-size: 0.85rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-top: 5px;
+        }
+
+        /* ABOUT */
+
+        .about-text {
+            max-width: 750px;
+            color: #aaa;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            padding: 25px;
+
+            background: #15181e;
+            border: 1px solid #252932;
+            border-radius: 8px;
+
+            transition: 0.2s;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            border-color: #444;
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .project-tech {
+            color: #7dd3fc;
+            font-size: 0.85rem;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            padding: 8px 14px;
+
+            background: #15181e;
+            border: 1px solid #252932;
+            border-radius: 5px;
+
+            color: #ccc;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            padding: 35px;
+
+            background: #15181e;
+            border: 1px solid #252932;
+            border-radius: 8px;
+        }
+
+        .contact p {
+            color: #aaa;
+            margin: 10px 0 20px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 30px;
+            text-align: center;
+
+            color: #666;
+            border-top: 1px solid #252932;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 16px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 0.85rem;
+            }
+
+            main {
+                width: 90%;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            #home {
+                min-height: 75vh;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="logo">Rishabh Dixit</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+
+        <!-- HOME -->
+
+        <section id="home">
+
+            <p class="small-title">B.Tech CSE Student</p>
+
+            <h1>
+                Hi, I'm Rishabh.
+            </h1>
+
+            <p class="hero-text">
+                I'm a Computer Science student interested in programming,
+                web development, and building useful digital projects.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="button primary">
+                    View Projects
+                </a>
+
+                <a href="#contact" class="button">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <div class="section-title">
+                <span>01</span>
+                <h2>About Me</h2>
+            </div>
+
+            <div class="about-text">
+
+                <p>
+                    I'm Rishabh Dixit, a B.Tech Computer Science &
+                    Engineering student at Uttranchal University.
+                </p>
+
+                <p>
+                    I enjoy learning programming, developing websites,
+                    and experimenting with different technologies.
+                </p>
+
+                <p>
+                    I'm currently working on improving my development
+                    skills and building projects that I can showcase
+                    in my portfolio.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS -->
+
+        <section id="projects">
+
+            <div class="section-title">
+                <span>02</span>
+                <h2>Projects</h2>
+            </div>
+
+            <div class="projects">
+
+                <div class="project">
+
+                    <h3>Fantasy Cricket</h3>
+
+                    <p>
+                        A Python-based fantasy cricket application
+                        with team creation, score calculation,
+                        and database integration.
+                    </p>
+
+                    <div class="project-tech">
+                        Python · PyQt · SQLite
+                    </div>
+
+                </div>
+
+
+                <div class="project">
+
+                    <h3>Portfolio Website</h3>
+
+                    <p>
+                        A simple personal portfolio website designed
+                        to showcase my projects, skills, and experience.
+                    </p>
+
+                    <div class="project-tech">
+                        HTML · CSS · JavaScript
+                    </div>
+
+                </div>
+
+
+                <div class="project">
+
+                    <h3>Student Management System</h3>
+
+                    <p>
+                        A project for managing and organizing
+                        student-related information using programming
+                        and database concepts.
+                    </p>
+
+                    <div class="project-tech">
+                        Programming · Database
+                    </div>
+
+                </div>
+
+
+                <div class="project">
+
+                    <h3>More Projects</h3>
+
+                    <p>
+                        More projects will be added here as I continue
+                        learning and building.
+                    </p>
+
+                    <div class="project-tech">
+                        Coming Soon
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+
+        <section id="skills">
+
+            <div class="section-title">
+                <span>03</span>
+                <h2>Skills</h2>
+            </div>
+
+            <div class="skills">
+
+                <div class="skill">C</div>
+                <div class="skill">Python</div>
+                <div class="skill">Java</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">MySQL</div>
+                <div class="skill">SQLite</div>
+                <div class="skill">Git</div>
+                <div class="skill">GitHub</div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section id="contact">
+
+            <div class="section-title">
+                <span>04</span>
+                <h2>Contact</h2>
+            </div>
+
+            <div class="contact">
+
+                <h3>Let's connect.</h3>
+
+                <p>
+                    If you'd like to get in touch, you can reach me
+                    through email or find me on GitHub.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="mailto:your-rishabhdixit9b@gmail.com"
+                        class="button primary"
+                    >
+                        Email Me
+                    </a>
+
+                    <a
+                        href="https://github.com/rishabhdixit-pixel"
+                        class="button"
+                        target="_blank"
+                    >
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Rishabh Dixit · Built with HTML & CSS
+    </footer>
+
+</body>
+</html>
+
